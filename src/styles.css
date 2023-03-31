@@ -1,0 +1,174 @@
+/* Menu settings */
+/* The main container */
+.wrapper {
+    background-color: #E2E7F0;
+    margin: 0px!important;
+}
+.greedy-menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    min-width: 240px;
+    font-family: 'FiraGO', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1;
+   /* Style resets */
+   /* The links */
+   /* The hidden links list */
+   /* The button which hides/shows links */
+}
+.greedy-menu {
+    box-sizing: border-box;
+}
+.greedy-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+   /* The visible links list */
+}
+.greedy-menu ul:first-of-type {
+    position: relative;
+    display: flex;
+   /* Displaying the menu items on the same line */
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    
+}
+.greedy-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #4A5468;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.greedy-menu .hidden-links {
+    position: absolute;
+    top: 54px;
+    right: 0;
+    background-color: #fff;
+    transform: none;
+    transform-origin: 0 0;
+    transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+    border-radius: 8px;
+    z-index: 15;
+}
+.greedy-menu .hidden-links.links-invisible {
+    transform: scaleY(0);
+}
+.greedy-menu .hidden-links.links-invisible li {
+    opacity: 0;
+}
+.greedy-menu .hidden-links.links-invisible li a {
+    color: #fff;
+}
+.greedy-menu .hidden-links li {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.25s ease 0.15s, color 0.15s;
+}
+
+.greedy-menu .toggle-links {
+    align-self: flex-end;
+    position: relative;
+    flex: 0 0 60px;
+    order: 2;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    border: none;
+    width: 60px;
+    height: 54px;
+    background-color: #E2E7F0;
+    font-size: 16px;
+    line-height: 1;
+    font-family: 'FiraGO';
+    color: #FF3B30;
+    cursor: pointer;
+   /* Firefox specific style reset */
+   /* The hamburger icon */
+   /* The circle icon */
+}
+
+.greedy-menu .toggle-links:hover::before {
+    transform: scale(1.05);
+}
+.greedy-menu .toggle-links:focus {
+    outline: none;
+}
+.greedy-menu .toggle-links.visible {
+    visibility: visible;
+}
+.greedy-menu .toggle-links::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+/* .greedy-menu .toggle-links::after {
+    content: '';
+    position: absolute;
+    top: 17px;
+    left: 12px;
+    display: block;
+    width: 36px;
+    height: 4px;
+    background-color: #fff;
+    box-shadow: 0 8px 0 #fff, 0 16px 0 #fff;
+    transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1), box-shadow 0.2s ease 0.1s;
+} */
+.greedy-menu .toggle-links.counter::before {
+    box-sizing: border-box;
+    content: attr(data-count);
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: -17px;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    width: 34px;
+    padding: 6px 1px;
+    background-color: #469ff9;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    line-height: 1;
+    text-align: center;
+}
+/* Page styles */
+main {
+    background-color: #F5F5F5;
+    margin: 0px;
+}
+
+.description {
+    margin-top: 40px;
+    font-family: Helvetica;
+    color: #fff;
+}
+.description a {
+    color: #fff;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

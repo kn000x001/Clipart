@@ -1,0 +1,441 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+<body class="">
+    <div class="px-2 md:px-20 py-4 flex justify-between">
+        <div class="hidden lg:flex">
+            <img class="mx-2" src="img/icon.svg" alt="">
+            <img class="mx-2" src="img/icon2.svg" alt="">
+            <img class="mx-2" src="img/icon3.svg" alt="">
+        </div>
+
+        <div>
+            <h1 class="text-2xl font-semibold text-[#FF3B30]">Company Logo</h1>
+        </div>
+
+        <div class="flex">
+            <img src="img/search-icon-mobile.png" alt="" id="search_icon" class="block md:hidden w-9 h-9">
+
+            <div>
+                <img src="img/search-icon.png" alt="" id="search_icon" class="hidden md:block w-8 h-8  absolute transform translate-y-1 translate-x-40">
+
+                <input class="hidden md:block bg-gray-200 rounded focus:outline-none p-2 placeholder-gray-500" type="text" placeholder="ძებნა...">
+            </div>
+            
+            <span class="mx-2 cursor-pointer lg:hidden block">
+                <img src="img/menu.svg" alt="" onclick="Menu(this)" class="w-9 h-9">         
+            </span>
+        </div>
+    </div>
+    
+    <ul id="mobile_menu" class="flex-col hidden">
+        <li class="mx-4 my-6 md:my-0 justify-center">
+            <a href="">
+                <span>
+                    პოლიტიკა
+                </span>
+            </a>
+        </li>
+        <li class="mx-4 my-6 md:my-0 justify-center">
+            <a href="">
+                <span>
+                    საზოგადოება
+                </span>
+            </a>
+        </li>
+        <li class="mx-4 my-6 md:my-0 justify-center">
+            <a href="">
+                <span>
+                    Covid-19
+                </span>
+            </a>
+        </li>
+        <li class="mx-4 my-6 md:my-0 justify-center">
+            <a href="">
+                <span>
+                    სამართალი
+                </span>
+            </a>
+        </li>
+        <li class="mx-4 my-6 md:my-0 justify-center">
+            <a href="">
+                <span>
+                    ბიზნესი და ეკონომიკა
+                </span>
+            </a>
+        </li>
+        <li class="mx-4 my-6 md:my-0 justify-center">
+            <a href="">
+                <span>
+                    კრიმინალი
+                </span>
+            </a>
+        </li>
+        <li class="mx-4 my-6 md:my-0 justify-center">
+            <a href="">
+                <span>
+                    შემთხვევა
+                </span>
+            </a>
+        </li>
+        <li class="mx-4 my-6 md:my-0 justify-center">
+            <a href="">
+                <span>
+                    მსოფლიო
+                </span>
+            </a>
+        </li>
+        <li class="mx-4 my-6 md:my-0 justify-center">
+            <a href="">
+                <span>
+                    სპორტი
+                </span>
+            </a>
+        </li>
+        <li class="mx-4 my-6 md:my-0 justify-center">
+            <a href="">
+                <span>
+                    რელიგია
+                </span>
+            </a>
+        </li>
+        <li class="mx-4 my-6 md:my-0 justify-center">
+            <a href="">
+                <span>
+                    ხელოვნება
+                </span>
+            </a>
+        </li>
+
+
+      </ul>
+
+
+    <div class="wrapper px-2 md:px-20 hidden lg:block">
+        <nav class="greedy-menu">
+          <button class="toggle-links">
+            
+          </button>
+          <ul class="links" id="ul">
+            <li>
+                <a href="">
+                    <span class="">
+                        პოლიტიკა
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>
+                        საზოგადოება
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>
+                        Covid-19
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>
+                        სამართალი
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>
+                        ბიზნესი და ეკონომიკა
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>
+                        კრიმინალი
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>
+                        შემთხვევა
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>
+                        მსოფლიო
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>
+                        სპორტი
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>
+                        რელიგია
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>
+                        ხელოვნება
+                    </span>
+                </a>
+            </li>
+        </ul>
+        </nav>
+       
+      </div>
+
+      <main class="md:px-20 grid grid-cols-1 md:grid-cols-4 xl:grid-cols-8 rounded">
+
+        <div class="swiper mySwiper col-span-1 md:col-span-4 xl:col-span-8 rounded">
+            <div class="swiper-wrapper m-1 my-2 rounded shadow-md rounded">
+              <div class="swiper-slide rounded">
+                <img src="img/slider.png" alt=""> class="rounded"
+              </div>
+              <div class="swiper-slide rounded">
+                <img src="img/slider2.png" alt="" class="rounded">
+              </div>
+              <div class="swiper-slide rounded">
+                <img src="img/slider3.png" alt="" class="rounded">
+              </div>
+              <div class="swiper-slide rounded">
+                <img src="img/slider4.png" alt="" class="rounded">
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <div class="order-2 xl:order-1 col-span-1 md:col-span-2 xl:col-span-2 flex-col mt-6">
+            <div class="flex-col m-1 my-2 rounded shadow-md">
+                <div class="flex">
+                    <img src="img/pic1.png" alt="" class="flex-1">
+                </div>
+                 <div class="bg-white rounded-b">
+                    <div class="flex px-2 font-FiraGO text-xs font-semibold leading-6 text-[#4A5468]">
+                        <p>პოლიტიკა • 18.04.2023</p>
+                    </div>
+                    <p class="font-FiraGO text-sm font-semibold leading-6 px-2 pb-1">
+                        კიმ ჩენ ინი აშშ-სა და სამხრეთ კორეას ბირთვული იარაღით ემუქრება
+                    </p>
+                </div>
+            </div>
+            <div class="flex-col m-1 my-2 rounded shadow-md">
+                <div class="flex">
+                    <img src="img/pic4.png" alt="" class="flex-1">
+                </div>
+                 <div class="bg-white rounded-b">
+                    <div class="flex px-2 font-FiraGO text-xs font-semibold leading-6 text-[#4A5468]">
+                        <p>პოლიტიკა • 18.04.2023</p>
+                    </div>
+                    <p class="font-FiraGO text-sm font-semibold leading-6 px-2 pb-1">
+                        საქართველოს მორაგბეთა ნაკრები „რაგბი ევროპის“ გამარჯვებულია
+                    </p>
+                </div>
+            </div>
+        </div>
+ 
+
+        <div class="order-1 xl:order-2 col-span-1 md:col-span-4  xl:col-span-4 m-1 my-2 rounded shadow-md bg-white mt-8">
+            <div class="flex">
+                <img src="img/pic3.png" alt="" class="flex-1">
+            </div>
+            <div class="bg-white">
+                <p class="font-FiraGO text-base font-semibold leading-6 px-2 md:py-8">
+                    ჩრდილოეთ კორეამ აშშ-სა და სამხრეთ კორეის წინააღმდეგ იმიტირებული ბირთვული კონტრშეტევა დაიწყო
+                </p>
+
+                <div class="border-t-2 flex justify-between px-2 py-5 rounded-b">
+                    <p class="font-FiraGO text-xs font-semibold leading-6 text-[#FF3B30]">ახალი ამბები</p>
+                    <p class="font-FiraGO text-xs font-semibold leading-6">აგვ. 30, 2020</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="order-3 col-span-1 xl:col-span-2 md:col-span-2 mt-6">
+            <div class="flex-col m-1 my-2 rounded shadow-md">
+                <div class="flex">
+                    <img src="img/pic2.png" alt="" class="flex-1">
+                </div>
+                 <div class="bg-white rounded-b">
+                    <div class="flex px-2 font-FiraGO text-xs font-semibold leading-6 text-[#4A5468]">
+                        <p>პოლიტიკა • 18.04.2023</p>
+                    </div>
+                    <p class="font-FiraGO text-sm font-semibold leading-6 px-2 pb-1">
+                        დღეს კიბოს სკრინინგის მხარდასაჭერი კონცერტი გაიმართება
+                    </p>
+                </div>
+    
+            </div>
+            <div class="flex-col m-1 my-2 rounded shadow-md">
+                <div class="flex">
+                    <img src="img/pic5.png" alt="" class="flex-1">
+                </div>
+                 <div class="bg-white rounded-b">
+                    <div class="flex px-2 font-FiraGO text-xs font-semibold leading-6 text-[#4A5468]">
+                        <p>პოლიტიკა • 18.04.2023</p>
+                    </div>
+                    <p class="font-FiraGO text-sm font-semibold leading-6 px-2 pb-1">
+                        უკრაინას დიდი კონტრშეტევისთვის მხოლოდ ერთი მცდელობა ექნება
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+
+      ;(function() {
+        'use strict';
+      
+        let Greedy = function Greedy(options) {
+          this.element = document.querySelector(options.element);
+          this.counter = options.counter || false;
+          this.visibleLinks = this.element.querySelector('ul');
+          this.toggleButton = this.element.querySelector('.toggle-links');
+          this.breakpoints = [];
+          this.init();
+        };
+      
+        window.Greedy = Greedy;
+      
+        Greedy.prototype.init = function() {
+          this.setupMenu();
+          this.calculateBreakpoints();
+          this.updateMenu();
+          this.addBindings();
+        };
+      
+        /*
+          Creates/returns a method bounded with 'this'. Used for creating
+          named event listeners that can easily be removed
+        */
+        Greedy.prototype.bindMethod = function(name) {
+          return this['_' + name + '_'] || Object.defineProperty(
+            this, '_' + name + '_', {value: this[name].bind(this)}
+          )['_' + name + '_'];
+        };
+      
+        /*
+          Creates the necessary markup and adds the necessary classes
+        */
+        Greedy.prototype.setupMenu = function() {
+          this.hiddenLinks = document.createElement('ul');
+          this.hiddenLinks.classList.add('hidden-links');
+          this.hiddenLinks.classList.add('links-invisible');
+          this.element.appendChild(this.hiddenLinks);
+          this.visibleLinks.classList.add('visible-links');
+      
+        //   if (this.counter) {
+        //     this.toggleButton.classList.add('counter');
+        //   } else {
+        //     this.toggleButton.classList.add('no-counter');
+        //   }
+        };
+      
+        /*
+          For each navigation item, calculate how much space is needed
+          to accomodate it
+        */
+        Greedy.prototype.calculateBreakpoints = function() {
+          let childrenWidth = 0;
+      
+          for (let i = 0; i < this.visibleLinks.children.length; i++) {
+            childrenWidth += this.visibleLinks.children[i].offsetWidth;
+            this.breakpoints[i] = childrenWidth;
+          }
+        };
+      
+        Greedy.prototype.addBindings = function() {
+          window.addEventListener('resize', this.bindMethod('updateMenu'));
+          this.toggleButton.addEventListener('click', this.bindMethod('toggleHiddenLinks'));
+          this.toggleButton.innerText = "მეტი";
+        };
+      
+        Greedy.prototype.updateMenu = function() {
+          let availableSpace = this.element.offsetWidth - this.toggleButton.offsetWidth;
+          let itemsVisible = this.visibleLinks.children.length;
+          let requiredSpace = this.breakpoints[itemsVisible - 1];
+      
+          /*
+            Check if there is not enough space for the visible links or
+            if there is space available for the hidden link
+          */
+          if (availableSpace < this.breakpoints[itemsVisible - 1]) {
+            this.toggleButton.classList.add('visible');
+      
+            while (availableSpace < this.breakpoints[itemsVisible - 1]) {
+              this.hiddenLinks.insertBefore(this.visibleLinks.children[itemsVisible - 1], this.hiddenLinks.firstChild);
+              itemsVisible--;
+            }
+          } else if (availableSpace > this.breakpoints[itemsVisible]) {
+            while (availableSpace > this.breakpoints[itemsVisible]) {
+              this.visibleLinks.appendChild(this.hiddenLinks.removeChild(this.hiddenLinks.firstChild));
+              itemsVisible++;
+            }
+          }
+      
+          if (this.counter) {
+            this.toggleButton.setAttribute('data-count', this.hiddenLinks.children.length);
+            if (!this.hiddenLinks.children.length) {
+              this.toggleButton.classList.remove('visible');
+            }
+          }
+        };
+      
+        Greedy.prototype.toggleHiddenLinks = function() {
+          this.hiddenLinks.classList.toggle('links-invisible');
+          this.toggleButton.classList.toggle('links-displayed');
+        };
+      })();
+      
+      // Initialise menu
+      document.addEventListener('DOMContentLoaded', function(event) {
+          let menu = new Greedy({
+                                element: '.greedy-menu',
+                                counter: true
+                               });
+        });
+
+    let swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    function Menu(e){
+      let list = document.getElementById('mobile_menu');
+      list.classList.toggle('hidden')
+    }
+    </script>
+
+</body>
+
+</html>
